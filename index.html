@@ -12,9 +12,51 @@
 		<!-- <link rel="stylesheet" href="/css/arvore.css"> -->
 		<script src="/js/arvore.js" type="text/javascript"></script>
 		<script src="/js/FamilyTree.js" type="text/javascript"></script>
-		<script src="https://balkan.app/js/FamilyTree.js"></script>
 	</head>
 	<body>
+
+			<!--  Modal   -->
+			<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="modalLoginTitulo">Cadastre sua familia</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+					  <form>
+						<div class="form-group">
+						  <label for="nome">Nome</label>
+						  <input type="nome" class="form-control" id="nome">
+						</div>
+						<div class="form-group">
+						  <label for="sobrenome">Sobrenome</label>
+						  <input type="sobrenome" class="form-control" id="sobrenome">
+						</div>
+						<div class="form-group">
+							<label for="parentesco">Parentesco</label>
+							<select id="parentesco" class="form-control">
+								<option>Selecione o Parêntesco</option>
+								<option>Pai</option>
+								<option>Mãe</option>
+								<option>Filho(a)</option>
+							  </select>
+						  </div>
+						  <div class="form-group">
+							<label for="foto">Selecione a Imagem</label>
+							<input type="file" id="foto" name="foto">
+						</div>
+
+						<button type="submit" class="btn btn-primary">Incluir</button>
+						<!-- <small class="form-text text-muted">Esqueceu a senha? <a href="#">Clique aqui</a>.</small> -->
+					  </form>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		  <!-- Fecha Modal  -->
 
 		<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
 			<a href="index.html" class="navbar-brand">
@@ -33,7 +75,13 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto nav-item dropdow">
+				  <li class="nav-item">
+					<a class="btn btn-outline-primary ml-md-2" href="#" data-toggle="modal" data-target="#modalLogin">Cadastrar sua Árvore</a>
+				  </li>
+				</ul>
+			  </div>
 		</nav>
 
 		<section class="container-fluid">
@@ -87,11 +135,13 @@
 			</div>
 		</section>
 
+		<!-- Arvore Geneologica  -->
+
 		<section class="py-5 bg-light text-center">
 			<div class="container">
 				<div class="my-5">
-					<span class="h6 d-block">Veja nossa Árvore Geneólogica </span>
-					<h2 class="display-4 text-primary">Desvenda essa Familia.</h2>
+					<span class="h6 d-block">Veja aqui </span>
+					<h2 class="display-4 text-primary">Crie a Árvore de sua Familia.</h2>
 				</div>
 		
 				<div class="body genealogy-body genealogy-scroll">
@@ -102,8 +152,8 @@
 									<div class="member-view-box">
 										<div class="member-image">
 											<img src="/img/fotos/persona.png" alt="Member">
-											<div class="member-details">
-												<h3>John Doe</h3>
+											<div class="member-details nav-item">
+												<h3>Marlon Miranda</h3>
 											</div>
 										</div>
 									</div>
@@ -356,132 +406,6 @@
 																</div>
 															</div>
 														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<a href="javascript:void(0);">
-													<div class="member-view-box">
-														<div class="member-image">
-															<img src="/img/fotos/persona.png" alt="Member">
-															<div class="member-details">
-																<h3>John Doe</h3>
-															</div>
-														</div>
-													</div>
-												</a>
-												<ul>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<a href="javascript:void(0);">
-													<div class="member-view-box">
-														<div class="member-image">
-															<img src="/img/fotos/persona.png" alt="Member">
-															<div class="member-details">
-																<h3>John Doe</h3>
-															</div>
-														</div>
-													</div>
-												</a>
-											  <ul>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:void(0);">
-															<div class="member-view-box">
-																<div class="member-image">
-																	<img src="/img/fotos/persona.png" alt="Member">
-																	<div class="member-details">
-																		<h3>John Doe</h3>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</li>
-												</ul>
 											</li>
 										</ul>
 									</li>
