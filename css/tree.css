@@ -96,6 +96,31 @@
   -moz-border-radius: 5px;
 }
 
+svg.tommy .node.male>rect {
+	fill: #039be5;
+  }   
+  
+  svg.tommy .node.female>rect {
+	fill: #FF46A3;
+  }  
+
+  svg.tommy [data-n-id="3"].node.male>rect {
+    fill: #00D3A5;
+    }
+        
+    [data-l-id] path {
+      stroke: #edcf0c;
+    }
+    
+    .field_0 {
+      font-family: Impact;
+      text-transform: uppercase;
+      fill: #cfcfcf;
+    }
+    .field_1 {
+      fill: #cfcfcf;
+    }
+
 .genealogy-tree li a:hover + ul li::after,
 .genealogy-tree li a:hover + ul li::before,
 .genealogy-tree li a:hover + ul::before,
