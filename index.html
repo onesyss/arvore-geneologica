@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/tree.css" />
-		<!-- <link rel="stylesheet" href="/css/arvore.css"> -->
 		<script src="/js/arvore.js" type="text/javascript"></script>
 		<script src="/js/FamilyTree.js" type="text/javascript"></script>
 		<script src="https://balkan.app/js/FamilyTree.js"></script>
@@ -113,109 +112,6 @@
 		</footer>
 
 		<!-- Fim Rodapé Site  -->
-
-
-		<script>
-			FamilyTree.templates.tommy_female.field_0 =
-				'<text width="230" style="font-size: 18px;" fill="#ffffff" x="125" y="95" text-anchor="middle" class="field_0">{val}</text>';
-			FamilyTree.templates.tommy_female.field_1 =
-				'<text data-width="130" data-text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end" class="field_1">{val}</text>';
-			FamilyTree.templates.tommy_male.field_0 =
-				'<text width="230" style="font-size: 18px;" fill="#ffffff" x="125" y="95" text-anchor="middle" class="field_0">{val}</text>';
-			FamilyTree.templates.tommy_male.field_1 =
-				'<text data-width="130" data-text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end" class="field_1">{val}</text>';
-
-			var family = new FamilyTree ( document . getElementById ( "tree" ), { 
-				mouseScrool: FamilyTree.action.scroll,			
-				nodeTreeMenu : true , 
-				mode: "dark",
-				editForm: {readOnly: true},
-				showXScroll: FamilyTree.scroll.visible,
-        		showYScroll: FamilyTree.scroll.visible,
-        		mouseScrool: FamilyTree.action.ctrlZoom,
-				enableSearch: false,
-    			scaleInitial: FamilyTree.match.boundary,
-
-				nodeBinding: {
-        			"field_0": "relation"
-    				},
-            	nodeBinding : { 
-                		field_0: "name",
-						field_1: "gender",
-						field_2: "nameParent",
-						
-					},
-				menu : { 
-            		pdf : { text : "Exportar PDF" }, 
- }, 
-        		nodeMenu :                
-         				{ 
-            		pdf : { text : "Exportar PDF" }, 
-					details: { text: "Details" },
-        			edit: { text: "Edit" }
- },
- 				editForm: {
-					titleBinding: "nome",
-					photoBinding: "Foto",
-					generateElementsFromFields: false,
-					addMore: 'Adicione mais elementos',
-					addMoreBtn: 'Adicionar elemento',
-					addMoreFieldName: 'Nome do elemento',
-					elements: [
-							{ type: 'textbox', label: 'Nome Completo', binding: 'name' },
-						[
-							{ type: 'date', label: 'Data de nascimento', binding: 'birthDate' },
-							{ type: 'date', label: 'Data de óbito', binding: 'deathDate' }
-						],
-						[
-							{ type: 'textbox', label: 'País', binding: 'pais' },
-							{ type: 'textbox', label: 'Cidade', binding: 'cidade' },
-						],
-							{ type: 'textbox', label: 'Foto', binding: 'ImgUrl', btn: 'Upload' },
-							{ type: 'textbox', label: 'Parentesco', binding: 'gender' },
-						],
-			},
-            		nodes : [ { id: 1, pids: [2], name: "Editar", gender: "Pai", },
-						{ id: 2, pids: [1], name: "Editar", gender: "Mãe"},
-					
-					]
-				});
-
-
-
-
-
-
-	// family.load(
-    //     [
-    //         { id: 0, pids: [1], gender: 'male' },
-    //         { id: 1, pids: [0], gender: 'female' },
-    //         { id: 2, pids: [3], gender: 'female', fid: 0, mid: 1 },
-    //         { id: 3, pids: [2], gender: 'male' },
-    //         { id: 4, pids: [5], gender: 'male', fid: 3, mid: 2 },
-    //         { id: 5, pids: [4], gender: 'female', fid: 21, mid: 22 },
-    //         { id: 6, pids: [10, 11, 12, 13], gender: 'male', fid: 4, mid: 5 },
-    //         { id: 7, gender: 'female', fid: 4, mid: 5 },
-    //         { id: 8, gender: 'male', fid: 4, mid: 5 },
-    //         { id: 9, gender: 'male', fid: 4, mid: 5 },
-    //         { id: 10, pids: [6], gender: 'female' },
-    //         { id: 11, pids: [6], gender: 'female' },
-    //         { id: 12, pids: [6], gender: 'female' },
-    //         { id: 13, pids: [6], gender: 'female' },
-    //         { id: 14, gender: 'female', fid: 6, mid: 13 },
-    //         { id: 15, gender: 'male', fid: 6, mid: 13 },
-    //         { id: 16, gender: 'female', fid: 6, mid: 13 },
-    //         { id: 17, gender: 'male', fid: 6, mid: 13 },
-    //         { id: 18, gender: 'female', fid: 6, mid: 12 },
-    //         { id: 19, pids: [20], gender: 'male' },
-    //         { id: 20, pids: [19], gender: 'female' },
-    //         { id: 21, pids: [22], gender: 'male', fid: 19, mid: 20 },
-    //         { id: 22, pids: [21], gender: 'female' }
-    //     ]
-    // );
-		</script> 
-
-
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
